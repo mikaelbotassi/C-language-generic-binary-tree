@@ -1,0 +1,3 @@
+C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\ArvoreBinaria.dir/objects.a
+C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\ar.exe cr CMakeFiles\ArvoreBinaria.dir/objects.a @CMakeFiles\ArvoreBinaria.dir\objects1.rsp
+C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\ArvoreBinaria.dir/objects.a -Wl,--no-whole-archive -o ArvoreBinaria.exe -Wl,--out-implib,libArvoreBinaria.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ArvoreBinaria.dir\linklibs.rsp

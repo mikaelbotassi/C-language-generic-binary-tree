@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree.c
+Headers/BinaryTree.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Headers/BinaryTree.h
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Headers/BinaryTree.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
