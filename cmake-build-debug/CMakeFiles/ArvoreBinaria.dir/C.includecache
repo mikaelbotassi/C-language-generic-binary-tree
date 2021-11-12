@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree.c
-Headers/BinaryTree.h
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Headers/BinaryTree.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.c
+BinaryTree.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
 
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Headers/BinaryTree.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
 stdio.h
 -
 stdlib.h

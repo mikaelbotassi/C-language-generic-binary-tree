@@ -41,8 +41,8 @@ node * insert(char type,  node * n, void *elem, CMP_ALUNO);
 
 biTree * graft(char type,  biTree * t, void *elem, CMP_ALUNO);
 
-node * search(node *n, int key, CMP_REGISTRATION);
+void search(node *n, int key, CMP_REGISTRATION, PRINT);
 
-node * prune(node * n, int key, CMP_REGISTRATION);
+node * prune(node * n, int key, CMP_REGISTRATION, PRINT);
 
 #endif //_BINARYTREE_H

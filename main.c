@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "Headers/Studant.h"
-#include "Headers/controleArquivo.h"
+#include "HeaderUtils/Studant.h"
+#include "HeaderUtils/controleArquivo.h"
 
 int main() {
     biTree *b = NULL;

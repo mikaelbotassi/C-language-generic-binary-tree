@@ -91,18 +91,18 @@ CMakeFiles/ArvoreBinaria.dir/Studant.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ArvoreBinaria.dir/Studant.c.s"
 	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\Studant.c" -o CMakeFiles\ArvoreBinaria.dir\Studant.c.s
 
-CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj: CMakeFiles/ArvoreBinaria.dir/flags.make
-CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj: ../BinaryTree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj"
-	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ArvoreBinaria.dir\BinaryTree.c.obj -c "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree.c"
+CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj: CMakeFiles/ArvoreBinaria.dir/flags.make
+CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj: ../BinaryTree/BinaryTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ArvoreBinaria.dir\BinaryTree\BinaryTree.c.obj -c "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree\BinaryTree.c"
 
-CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.i"
-	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree.c" > CMakeFiles\ArvoreBinaria.dir\BinaryTree.c.i
+CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.i"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree\BinaryTree.c" > CMakeFiles\ArvoreBinaria.dir\BinaryTree\BinaryTree.c.i
 
-CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.s"
-	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree.c" -o CMakeFiles\ArvoreBinaria.dir\BinaryTree.c.s
+CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.s"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\ArvoreBinaria\BinaryTree\BinaryTree.c" -o CMakeFiles\ArvoreBinaria.dir\BinaryTree\BinaryTree.c.s
 
 CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj: CMakeFiles/ArvoreBinaria.dir/flags.make
 CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj: ../controleArquivo.c
@@ -121,7 +121,7 @@ CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.s: cmake_force
 ArvoreBinaria_OBJECTS = \
 "CMakeFiles/ArvoreBinaria.dir/main.c.obj" \
 "CMakeFiles/ArvoreBinaria.dir/Studant.c.obj" \
-"CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj" \
+"CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj" \
 "CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj"
 
 # External object files for target ArvoreBinaria
@@ -129,7 +129,7 @@ ArvoreBinaria_EXTERNAL_OBJECTS =
 
 ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/main.c.obj
 ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/Studant.c.obj
-ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj
+ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj
 ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj
 ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/build.make
 ArvoreBinaria.exe: CMakeFiles/ArvoreBinaria.dir/linklibs.rsp

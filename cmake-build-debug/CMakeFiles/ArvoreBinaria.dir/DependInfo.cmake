@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/cmake-build-debug/CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj"
+  "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/cmake-build-debug/CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Studant.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/cmake-build-debug/CMakeFiles/ArvoreBinaria.dir/Studant.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/controleArquivo.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/cmake-build-debug/CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/main.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/cmake-build-debug/CMakeFiles/ArvoreBinaria.dir/main.c.obj"

@@ -2,7 +2,7 @@
 // Created by mikae on 03/11/2021.
 //
 
-#include "Headers/BinaryTree.h"
+#include "BinaryTree.h"
 
 //===================== PRIVATE FUNCTIONS ======================================
 int empty(node *n);
@@ -52,86 +52,6 @@ biTree * freeBiTree(biTree * b){
     return b;
 }
 
-void rightRotation(TNoAVL **r) {
-    TNoAVL *y=*r;
-    TNoAVL *x=y->esq;
-    y->esq=x->dir;
-    x->dir=y;
-    x->fb=0;
-    y->fb=0;
-    *r=x;
-}
-
-void leftRotation(TNoAVL **r) {
-    TNoAVL *y=*r;
-    TNoAVL *x=y->dir;
-    y->dir=x->esq;
-    x->esq=y;
-    x->fb=0;
-    y->fb=0;
-    *r=x;
-}
-
-
-void leftRightRotation (TNoAVL **r) {
-    TNoAVL *y=*r;//no *c=*r;
-    TNoAVL *e = y->esq;//no *a=c->esq;
-    TNoAVL *d = e->dir;//no *b=a->dir;
-    //Rotação Esqueda -rot_esq(&(y->esq));
-    e->dir = d->esq;
-    d->esq = e;
-    //Rotação direita -- rot_dir(&y);
-    y->esq = d->dir;
-    d->dir = y;
-    //Atualização dos fbs
-    switch (d->fb) {
-        case -1:
-            e->fb=0;
-            y->fb=1;
-            break;
-        case 0:
-            e->fb=0;
-            y->fb=0;
-            break;
-        case 1:
-            e->fb= -1;
-            y->fb=0;
-            break;
-    }
-    d->fb=0;
-    *r=d;
-}
-
-void rightLeftRotation (TNoAVL **r) {
-    TNoAVL *y=*r;//no *c=*r;
-    TNoAVL *d = y->dir;//no *a=c->esq;
-    TNoAVL *e = d->esq;//no *b=a->dir;
-    //Rotação Direita
-    d->esq = e->dir;
-    e->dir = d;
-    //Rotação esquerda
-    y->dir = e->esq;
-    e->esq = y;
-
-    //Atualização dos fbs
-    switch (e->fb) {
-        case -1:
-            y->fb=0;
-            d->fb=1;
-            break;
-        case 0:
-            y->fb=0;
-            d->fb=0;
-            break;
-        case 1:
-            y->fb= -1;
-            d->fb=0;
-            break;
-    }
-    e->fb=0;
-    *r=e;
-}
-
 int calculateHeight(node *n) {
     if (empty(n)) return 0;
     else if (empty(n->right) && empty(n->left)) return 0;
@@ -167,9 +87,11 @@ biTree * graft(char type,  biTree * t, void *elem, CMP_ALUNO) {
 }
 
 
-node * search(node *n, int key, CMP_REGISTRATION){
+void search(node *n, int key, CMP_REGISTRATION, PRINT){
+    int traversedElements = 0;
     node * aux = n;
     while(!empty(aux)){
+        traversedElements++;
         if(comp(aux->type, aux->element, key) == 1){
             aux = aux->right;
         }
@@ -177,21 +99,27 @@ node * search(node *n, int key, CMP_REGISTRATION){
             aux = aux->left;
         }
         else{
-            return aux;
+            print(aux->type, aux->element);
+            printf("\nCOMPARATION NUMBER: %d\n", traversedElements);
+            return;
         }
     }
-    return NULL;
+    printf("\n\tALUNO NAO EXISTE!\n");
 }
 
-node * prune(node * n, int key, CMP_REGISTRATION){
-    if (n == NULL)
+node * prune(node * n, int key, CMP_REGISTRATION, PRINT){
+    if (n == NULL) {
+        printf("\n\tALUNO NAO EXISTE!\n");
         return NULL;
+    }
     else if (comp(n->type, n->element, key) == -1)
-        n->left = prune(n->left, key, comp);
+        n->left = prune(n->left, key, comp, print);
     else if (comp(n->type, n->element, key) == 1)
-        n->left = prune(n->right, key, comp);
+        n->right = prune(n->right, key, comp, print);
     else {//Se chegar aqui achei o no a ser removido
+        print(n->type, n->element);
         printf("\n\tALUNO EXCLUIDO!\n");
+
         // Se o nó não tem filhos só o desaloco
         if (n->left == NULL && n->right == NULL) {
             free (n);
@@ -223,7 +151,7 @@ node * prune(node * n, int key, CMP_REGISTRATION){
             n->element = e->element;
             e->element = aux;
             //Agora chamo o método para remover a folha.
-            n->left = prune(n->left, key, comp);
+            n->left = prune(n->left, key, comp, print);
         }
     }
     return n;

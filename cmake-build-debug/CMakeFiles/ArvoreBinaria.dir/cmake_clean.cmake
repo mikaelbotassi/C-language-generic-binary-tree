@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "ArvoreBinaria.exe"
   "ArvoreBinaria.exe.manifest"
   "ArvoreBinaria.pdb"
-  "CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj"
+  "CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj"
   "CMakeFiles/ArvoreBinaria.dir/Studant.c.obj"
   "CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj"
   "CMakeFiles/ArvoreBinaria.dir/main.c.obj"

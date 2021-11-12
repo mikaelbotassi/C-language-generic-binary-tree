@@ -128,29 +128,29 @@ ArvoreBinaria/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/build
 .PHONY : ArvoreBinaria/fast
 
-BinaryTree.obj: BinaryTree.c.obj
-.PHONY : BinaryTree.obj
+BinaryTree/BinaryTree.obj: BinaryTree/BinaryTree.c.obj
+.PHONY : BinaryTree/BinaryTree.obj
 
 # target to build an object file
-BinaryTree.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.obj
-.PHONY : BinaryTree.c.obj
+BinaryTree/BinaryTree.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj
+.PHONY : BinaryTree/BinaryTree.c.obj
 
-BinaryTree.i: BinaryTree.c.i
-.PHONY : BinaryTree.i
+BinaryTree/BinaryTree.i: BinaryTree/BinaryTree.c.i
+.PHONY : BinaryTree/BinaryTree.i
 
 # target to preprocess a source file
-BinaryTree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.i
-.PHONY : BinaryTree.c.i
+BinaryTree/BinaryTree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.i
+.PHONY : BinaryTree/BinaryTree.c.i
 
-BinaryTree.s: BinaryTree.c.s
-.PHONY : BinaryTree.s
+BinaryTree/BinaryTree.s: BinaryTree/BinaryTree.c.s
+.PHONY : BinaryTree/BinaryTree.s
 
 # target to generate assembly for a file
-BinaryTree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree.c.s
-.PHONY : BinaryTree.c.s
+BinaryTree/BinaryTree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.s
+.PHONY : BinaryTree/BinaryTree.c.s
 
 Studant.obj: Studant.c.obj
 .PHONY : Studant.obj
@@ -233,9 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ArvoreBinaria
-	@echo ... BinaryTree.obj
-	@echo ... BinaryTree.i
-	@echo ... BinaryTree.s
+	@echo ... BinaryTree/BinaryTree.obj
+	@echo ... BinaryTree/BinaryTree.i
+	@echo ... BinaryTree/BinaryTree.s
 	@echo ... Studant.obj
 	@echo ... Studant.i
 	@echo ... Studant.s

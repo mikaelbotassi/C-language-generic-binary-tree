@@ -3,7 +3,7 @@
 //
 
 //========== INCLUDES ============
-#include "Headers/Studant.h"
+#include "HeaderUtils/Studant.h"
 //================================
 /*
 Função de menu, esta função chama as outras funções dependendo da resposta do usuário.
@@ -134,15 +134,7 @@ void studantSearch(biTree * b)
     int chave;
     printf("\nQual a matricula da pessoa que voce quer procurar? ");
     scanf(" %d", &chave);
-    node * n = search(b->root, chave, registrationCompare);
-    if (n != NULL)
-    {//ACHOU O ELEMENTO
-        printStudant('A', n->element);
-    }
-    else
-    {//NÃO ACHOU
-        printf("\nALUNO NAO EXISTE!\n");
-    }
+    search(b->root, chave, registrationCompare, printStudant);
 }
 
 void excludeStudant(biTree * b)
@@ -150,7 +142,7 @@ void excludeStudant(biTree * b)
     int chave;
     printf("\nQual a matricula da pessoa que voce quer excluir? ");
     scanf(" %d", &chave);
-    prune(b->root, chave, registrationCompare);
+    prune(b->root, chave, registrationCompare, printStudant);
 }
 
 void printStudant(char id, void *elem)
