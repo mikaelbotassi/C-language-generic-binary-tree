@@ -29,13 +29,13 @@ int studantCompare(char id, void * n1, void * n2);
 
 void studantSearch(biTree * b);
 
-int registrationEquals(int matricula, node * elem);
-
 void excludeStudant(biTree * b);
 
 void printStudant(char id, void *elem);
 
 int returnChave(void * elem, char id);
+
+void printTree(biTree * b);
 
 
 #endif //_STUDANT_H

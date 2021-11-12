@@ -4,10 +4,6 @@
 
 #include "Headers/BinaryTree.h"
 
-//====================== CONSTANTS =======================================
-
-//==============================================================================
-
 //===================== PRIVATE FUNCTIONS ======================================
 int empty(node *n);
 //=============================================================================
@@ -36,59 +32,116 @@ int empty(node *n) {
     return 0;
 }
 
-void freeNode(node * n){
+node * freeNode(node * n){
     if(empty(n)){}
     else{
-        freeNode(n->left);
-        freeNode(n->right);
+        n->left = freeNode(n->left);
+        n->right = freeNode(n->right);
         free(n);
         n = NULL;
     }
+    return n;
 }
 
-void freeBiTree(biTree * b){
+biTree * freeBiTree(biTree * b){
     if(b->root == NULL){}
     else{
-        freeNode(b->root);
+        b->root = freeNode(b->root);
         free(b);
     }
+    return b;
 }
 
-void preOrder(node * root, PRINT){
-    if(empty(root)){}
-    else{
-        print(root->type,root->element);
-        preOrder(root->left, print);
-        preOrder(root->right, print);
-    }
+void rightRotation(TNoAVL **r) {
+    TNoAVL *y=*r;
+    TNoAVL *x=y->esq;
+    y->esq=x->dir;
+    x->dir=y;
+    x->fb=0;
+    y->fb=0;
+    *r=x;
 }
 
-void inOrder(node * root, PRINT){
-    if(empty(root)){}
-    else{
-        inOrder(root->left, print);
-        print(root->type,root->element);
-        inOrder(root->right, print);
-    }
+void leftRotation(TNoAVL **r) {
+    TNoAVL *y=*r;
+    TNoAVL *x=y->dir;
+    y->dir=x->esq;
+    x->esq=y;
+    x->fb=0;
+    y->fb=0;
+    *r=x;
 }
 
-void posOrder(node * root, PRINT){
-    if(empty(root)){}
-    else{
-        posOrder(root->left, print);
-        posOrder(root->right, print);
-        print(root->type, root->element);
+
+void leftRightRotation (TNoAVL **r) {
+    TNoAVL *y=*r;//no *c=*r;
+    TNoAVL *e = y->esq;//no *a=c->esq;
+    TNoAVL *d = e->dir;//no *b=a->dir;
+    //Rotação Esqueda -rot_esq(&(y->esq));
+    e->dir = d->esq;
+    d->esq = e;
+    //Rotação direita -- rot_dir(&y);
+    y->esq = d->dir;
+    d->dir = y;
+    //Atualização dos fbs
+    switch (d->fb) {
+        case -1:
+            e->fb=0;
+            y->fb=1;
+            break;
+        case 0:
+            e->fb=0;
+            y->fb=0;
+            break;
+        case 1:
+            e->fb= -1;
+            y->fb=0;
+            break;
     }
+    d->fb=0;
+    *r=d;
+}
+
+void rightLeftRotation (TNoAVL **r) {
+    TNoAVL *y=*r;//no *c=*r;
+    TNoAVL *d = y->dir;//no *a=c->esq;
+    TNoAVL *e = d->esq;//no *b=a->dir;
+    //Rotação Direita
+    d->esq = e->dir;
+    e->dir = d;
+    //Rotação esquerda
+    y->dir = e->esq;
+    e->esq = y;
+
+    //Atualização dos fbs
+    switch (e->fb) {
+        case -1:
+            y->fb=0;
+            d->fb=1;
+            break;
+        case 0:
+            y->fb=0;
+            d->fb=0;
+            break;
+        case 1:
+            y->fb= -1;
+            d->fb=0;
+            break;
+    }
+    e->fb=0;
+    *r=e;
 }
 
 int calculateHeight(node *n) {
-    if (empty(n)) {
-        return 0;
-    } else {
-        if (calculateHeight(n->left) > calculateHeight(n->right)) {
-            return 1 + calculateHeight(n->left);
+    if (empty(n)) return 0;
+    else if (empty(n->right) && empty(n->left)) return 0;
+    else {
+        int hLeft = calculateHeight(n->left);
+        int hRight = calculateHeight(n->right);
+        if (hLeft > hRight) {
+            return 1 + hLeft;
         } else {
-            return 1 + calculateHeight(n->right);
+            return 1 + hRight;
         }
     }
 }
@@ -114,21 +167,64 @@ biTree * graft(char type,  biTree * t, void *elem, CMP_ALUNO) {
 }
 
 
-node * search(node *n, int key, EQUALS, CMP_REGISTRATION){
+node * search(node *n, int key, CMP_REGISTRATION){
     node * aux = n;
     while(!empty(aux)){
-        if(equals(key, aux)){
-            return aux;
-        }
-        else if(comp(aux->type, aux->element, key)){
+        if(comp(aux->type, aux->element, key) == 1){
             aux = aux->right;
         }
-        else{
+        else if(comp(aux->type, aux->element, key) == -1){
             aux = aux->left;
+        }
+        else{
+            return aux;
         }
     }
     return NULL;
 }
 
-void prune(node * n, int key, EQUALS, CMP_REGISTRATION){
+node * prune(node * n, int key, CMP_REGISTRATION){
+    if (n == NULL)
+        return NULL;
+    else if (comp(n->type, n->element, key) == -1)
+        n->left = prune(n->left, key, comp);
+    else if (comp(n->type, n->element, key) == 1)
+        n->left = prune(n->right, key, comp);
+    else {//Se chegar aqui achei o no a ser removido
+        printf("\n\tALUNO EXCLUIDO!\n");
+        // Se o nó não tem filhos só o desaloco
+        if (n->left == NULL && n->right == NULL) {
+            free (n);
+            //Coloco NULL em r para retornar
+            n = NULL;
+        }
+            // Se o nó só tem filho à direita, desaloco o nó e guardo o filho a direita para retornar
+        else if (n->left == NULL) {
+            node * d = n->right;
+            free (n);
+            n=d;
+        }
+            // Se o nó só tem filho à esquerda, desaloco o nó e guardo o filho a esquerda para retornar
+        else if (n->right == NULL) {
+            node * e = n->left;
+            free (n);
+            n=e;
+        }
+            // Se o nó tem os dois filhos, acho o elemento mais à direita da árvore a esquerda
+            //Troco a informação da raiz pela desse elemento e o desaloco
+        else {
+            node * e = n->left;
+            //Laço para encontrar o maior elemento da subarvore esquerda
+            while (e->right != NULL) {
+                e = e->right;
+            }
+            //Troco a informação do maior elemento da esquerda com a raiz
+            void * aux = n->element;
+            n->element = e->element;
+            e->element = aux;
+            //Agora chamo o método para remover a folha.
+            n->left = prune(n->left, key, comp);
+        }
+    }
+    return n;
 }

@@ -8,8 +8,10 @@ int main() {
     b = treeInitialized();
     b = readTreeAlunoFromFile(b);
     menu(b);
-    //b->height = calculateHeight(b->root);
-    printf("ALTURA: %d", b->height);
+    writeMenu(b);
+    b->height = calculateHeight(b->root);
+    printf("\nALTURA = %d\n", b->height);
+    freeBiTree(b);
 
     return 0;
 }

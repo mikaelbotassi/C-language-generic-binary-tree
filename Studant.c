@@ -33,10 +33,10 @@ void menu(biTree * b)
         {
             studantSearch(b);
         }
-        /*if (res == 3)
+        if (res == 3)
         {
-            excludeStudant(n);
-        }*/
+            excludeStudant(b);
+        }
     }
 }
 
@@ -90,6 +90,9 @@ int registrationCompare(char id, void *n, int key){
             if(key > p->matricula){
                 return 1;
             }
+            else if(key < p->matricula){
+                return -1;
+            }
             else{
                 return 0;
             }
@@ -131,7 +134,7 @@ void studantSearch(biTree * b)
     int chave;
     printf("\nQual a matricula da pessoa que voce quer procurar? ");
     scanf(" %d", &chave);
-    node * n = search(b->root, chave, registrationEquals, registrationCompare);
+    node * n = search(b->root, chave, registrationCompare);
     if (n != NULL)
     {//ACHOU O ELEMENTO
         printStudant('A', n->element);
@@ -142,21 +145,12 @@ void studantSearch(biTree * b)
     }
 }
 
-int registrationEquals(int matricula, node * n)
-{ //função de comparar pra ver se as matriculas são iguais
-    aluno *p = n->element;
-    if (p->matricula == matricula)
-    {
-        return 1;
-    }
-    return 0;
-}
-
 void excludeStudant(biTree * b)
 {//Função que exclui um determinado aluno da Lista
     int chave;
     printf("\nQual a matricula da pessoa que voce quer excluir? ");
     scanf(" %d", &chave);
+    prune(b->root, chave, registrationCompare);
 }
 
 void printStudant(char id, void *elem)

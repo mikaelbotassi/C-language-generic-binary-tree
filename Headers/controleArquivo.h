@@ -9,6 +9,15 @@
 
 biTree * readTreeAlunoFromFile(biTree * root);
 
-void writeTreeOnFile(biTree * root);
+void writeTreeOnFile(biTree * root, int typePrint);
+
+void writeMenu(biTree * root);
+
+void writePreOrder(FILE * fp, node * root);
+
+void writeInOrder(FILE * fp, node * root);
+
+void writePosOrder(FILE * fp, node * root);
+
 
 #endif //_CONTROLEARQUIVOALUNO_H
