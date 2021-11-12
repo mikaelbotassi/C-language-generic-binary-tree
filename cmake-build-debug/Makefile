@@ -152,53 +152,53 @@ BinaryTree/BinaryTree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.s
 .PHONY : BinaryTree/BinaryTree.c.s
 
-Studant.obj: Studant.c.obj
-.PHONY : Studant.obj
+Utils/Studant.obj: Utils/Studant.c.obj
+.PHONY : Utils/Studant.obj
 
 # target to build an object file
-Studant.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Studant.c.obj
-.PHONY : Studant.c.obj
+Utils/Studant.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/Studant.c.obj
+.PHONY : Utils/Studant.c.obj
 
-Studant.i: Studant.c.i
-.PHONY : Studant.i
+Utils/Studant.i: Utils/Studant.c.i
+.PHONY : Utils/Studant.i
 
 # target to preprocess a source file
-Studant.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Studant.c.i
-.PHONY : Studant.c.i
+Utils/Studant.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/Studant.c.i
+.PHONY : Utils/Studant.c.i
 
-Studant.s: Studant.c.s
-.PHONY : Studant.s
+Utils/Studant.s: Utils/Studant.c.s
+.PHONY : Utils/Studant.s
 
 # target to generate assembly for a file
-Studant.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Studant.c.s
-.PHONY : Studant.c.s
+Utils/Studant.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/Studant.c.s
+.PHONY : Utils/Studant.c.s
 
-controleArquivo.obj: controleArquivo.c.obj
-.PHONY : controleArquivo.obj
+Utils/controleArquivo.obj: Utils/controleArquivo.c.obj
+.PHONY : Utils/controleArquivo.obj
 
 # target to build an object file
-controleArquivo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj
-.PHONY : controleArquivo.c.obj
+Utils/controleArquivo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/controleArquivo.c.obj
+.PHONY : Utils/controleArquivo.c.obj
 
-controleArquivo.i: controleArquivo.c.i
-.PHONY : controleArquivo.i
+Utils/controleArquivo.i: Utils/controleArquivo.c.i
+.PHONY : Utils/controleArquivo.i
 
 # target to preprocess a source file
-controleArquivo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.i
-.PHONY : controleArquivo.c.i
+Utils/controleArquivo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/controleArquivo.c.i
+.PHONY : Utils/controleArquivo.c.i
 
-controleArquivo.s: controleArquivo.c.s
-.PHONY : controleArquivo.s
+Utils/controleArquivo.s: Utils/controleArquivo.c.s
+.PHONY : Utils/controleArquivo.s
 
 # target to generate assembly for a file
-controleArquivo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.s
-.PHONY : controleArquivo.c.s
+Utils/controleArquivo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ArvoreBinaria.dir\build.make CMakeFiles/ArvoreBinaria.dir/Utils/controleArquivo.c.s
+.PHONY : Utils/controleArquivo.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -236,12 +236,12 @@ help:
 	@echo ... BinaryTree/BinaryTree.obj
 	@echo ... BinaryTree/BinaryTree.i
 	@echo ... BinaryTree/BinaryTree.s
-	@echo ... Studant.obj
-	@echo ... Studant.i
-	@echo ... Studant.s
-	@echo ... controleArquivo.obj
-	@echo ... controleArquivo.i
-	@echo ... controleArquivo.s
+	@echo ... Utils/Studant.obj
+	@echo ... Utils/Studant.i
+	@echo ... Utils/Studant.s
+	@echo ... Utils/controleArquivo.obj
+	@echo ... Utils/controleArquivo.i
+	@echo ... Utils/controleArquivo.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

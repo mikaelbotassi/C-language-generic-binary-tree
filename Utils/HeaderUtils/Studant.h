@@ -2,7 +2,7 @@
 // Created by mikael on 03/11/2021.
 //
 
-#include "../BinaryTree/BinaryTree.h"
+#include "../../BinaryTree/BinaryTree.h"
 
 #ifndef _STUDANT_H
 #define _STUDANT_H

@@ -3,4 +3,4 @@ project(ArvoreBinaria C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ArvoreBinaria main.c Studant.c BinaryTree/BinaryTree.c controleArquivo.c)
+add_executable(ArvoreBinaria main.c Utils/Studant.c BinaryTree/BinaryTree.c Utils/controleArquivo.c)

@@ -4,17 +4,17 @@
 CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj: \
  ../BinaryTree/BinaryTree.c \
  ../BinaryTree/BinaryTree.h
-CMakeFiles/ArvoreBinaria.dir/Studant.c.obj: \
+CMakeFiles/ArvoreBinaria.dir/Utils/Studant.c.obj: \
  ../BinaryTree/BinaryTree.h \
- ../HeaderUtils/Studant.h \
- ../Studant.c
-CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj: \
+ ../Utils/HeaderUtils/Studant.h \
+ ../Utils/Studant.c
+CMakeFiles/ArvoreBinaria.dir/Utils/controleArquivo.c.obj: \
  ../BinaryTree/BinaryTree.h \
- ../HeaderUtils/Studant.h \
- ../HeaderUtils/controleArquivo.h \
- ../controleArquivo.c
+ ../Utils/HeaderUtils/Studant.h \
+ ../Utils/HeaderUtils/controleArquivo.h \
+ ../Utils/controleArquivo.c
 CMakeFiles/ArvoreBinaria.dir/main.c.obj: \
  ../BinaryTree/BinaryTree.h \
- ../HeaderUtils/Studant.h \
- ../HeaderUtils/controleArquivo.h \
+ ../Utils/HeaderUtils/Studant.h \
+ ../Utils/HeaderUtils/controleArquivo.h \
  ../main.c

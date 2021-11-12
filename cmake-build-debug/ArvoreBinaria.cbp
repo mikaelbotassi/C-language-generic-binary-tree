@@ -80,10 +80,10 @@
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h">
 			<Option target="ArvoreBinaria"/>
 		</Unit>
-		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Studant.c">
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/Studant.c">
 			<Option target="ArvoreBinaria"/>
 		</Unit>
-		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/controleArquivo.c">
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/controleArquivo.c">
 			<Option target="ArvoreBinaria"/>
 		</Unit>
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/main.c">

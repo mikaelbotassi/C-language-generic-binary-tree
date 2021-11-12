@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "HeaderUtils/Studant.h"
-#include "HeaderUtils/controleArquivo.h"
+#include "Utils/HeaderUtils/Studant.h"
+#include "Utils/HeaderUtils/controleArquivo.h"
 
 int main() {
     biTree *b = NULL;
@@ -9,8 +9,6 @@ int main() {
     b = readTreeAlunoFromFile(b);
     menu(b);
     writeMenu(b);
-    b->height = calculateHeight(b->root);
-    printf("\nALTURA = %d\n", b->height);
     freeBiTree(b);
 
     return 0;

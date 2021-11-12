@@ -4,17 +4,17 @@
 CMakeFiles/ArvoreBinaria.dir/BinaryTree/BinaryTree.c.obj
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.c
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
-CMakeFiles/ArvoreBinaria.dir/Studant.c.obj
+CMakeFiles/ArvoreBinaria.dir/Utils/Studant.c.obj
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/HeaderUtils/Studant.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Studant.c
-CMakeFiles/ArvoreBinaria.dir/controleArquivo.c.obj
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/HeaderUtils/Studant.h
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/Studant.c
+CMakeFiles/ArvoreBinaria.dir/Utils/controleArquivo.c.obj
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/HeaderUtils/Studant.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/HeaderUtils/controleArquivo.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/controleArquivo.c
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/HeaderUtils/Studant.h
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/HeaderUtils/controleArquivo.h
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/controleArquivo.c
 CMakeFiles/ArvoreBinaria.dir/main.c.obj
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/BinaryTree/BinaryTree.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/HeaderUtils/Studant.h
- C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/HeaderUtils/controleArquivo.h
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/HeaderUtils/Studant.h
+ C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/Utils/HeaderUtils/controleArquivo.h
  C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/ArvoreBinaria/main.c
