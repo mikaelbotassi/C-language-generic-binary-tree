@@ -25,6 +25,7 @@ typedef struct Node{
 typedef struct BinaryTree{
     node * root;
     int height;
+    int elementsQuantity;
 }biTree;
 
 biTree * treeInitialized();

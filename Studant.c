@@ -22,9 +22,10 @@ void menu(biTree * b)
         printf("\nDigite o numero correspondente a funcao que deseja utilizar: ");
         scanf(" %d", &res);
 
-        /*if(res==0){
-            todasEstatisticas(b);
-        }*/
+        if(res==0){
+            printf("\n\tTREE HEIGHT: %d\n", calculateHeight(b->root));
+            printf("\n\tTOTAL ELEMENTS: %d\n", b->elementsQuantity);
+        }
         if (res == 1)
         {
             newStudant(b);
@@ -132,7 +133,7 @@ int studantCompare(char id, void * n1, void *n2){ // Pega dois elementos, verifi
 void studantSearch(biTree * b)
 { //Procura o aluno pela matricula
     int chave;
-    printf("\nQual a matricula da pessoa que voce quer procurar? ");
+    printf("\nDigite a matricula da pessoa que voce quer procurar: ");
     scanf(" %d", &chave);
     search(b->root, chave, registrationCompare, printStudant);
 }
@@ -140,7 +141,7 @@ void studantSearch(biTree * b)
 void excludeStudant(biTree * b)
 {//Função que exclui um determinado aluno da Lista
     int chave;
-    printf("\nQual a matricula da pessoa que voce quer excluir? ");
+    printf("\nDigite a matricula da pessoa que voce quer excluir: ");
     scanf(" %d", &chave);
     prune(b->root, chave, registrationCompare, printStudant);
 }

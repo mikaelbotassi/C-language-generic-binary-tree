@@ -96,10 +96,10 @@ void writeTreeOnFile(biTree * root, int typePrint)
             fclose(fp);
             break;
         case 4:
-            printf("\nSAIR\n");
+            printf("\n\n\t\t...EXIT...\n\n");
             break;
         default:
-            printf("\nPOR FAVOR DIGITE UM NUMERO CORRETO!\n");
+            printf("\nPLEASE ENTER A CORRECT NUMBER!\n");
             break;
     }
 }
@@ -107,12 +107,12 @@ void writeTreeOnFile(biTree * root, int typePrint)
 void writeMenu(biTree * root){
     int res = 0;
     while(res != 4){
-        printf("\n\nMetodos de printar a arvore:\n");
-        printf("1 - Print pre Order\n");
-        printf("2 - Print in Order\n");
-        printf("3 - Print pos order\n");
-        printf("4 - Nao desejo mais escrever o arquivo\n");
-        printf("Digite qual voce quer: ");
+        printf("\n\nMETHODS OF WRITING THE TREE:\n");
+        printf("\t1 - WRITE IN 'PRE ORDER'\n");
+        printf("\t2 - WRITE IN 'IN ORDER'\n");
+        printf("\t3 - WRITE IN 'POS ORDER'\n");
+        printf("\t4 - I DO NOT WANT TO WRITE THE FILE\n");
+        printf("TYPE WHAT OPTION YOU WANT: ");
         scanf("%d", &res);
         writeTreeOnFile(root, res);
     }

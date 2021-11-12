@@ -13,6 +13,8 @@ int empty(node *n);
 biTree * treeInitialized() {
     biTree * t = (biTree *) malloc(sizeof(biTree));
     t->root = NULL;
+    t->height = 0;
+    t->elementsQuantity = 0;
     return t;
 }
 
@@ -82,6 +84,7 @@ node * insert(char type,  node *n, void *elem, CMP_ALUNO){
 }
 
 biTree * graft(char type,  biTree * t, void *elem, CMP_ALUNO) {
+    t->elementsQuantity++;
     t->root = insert(type, t->root, elem, comp);
     return t;
 }
@@ -104,12 +107,12 @@ void search(node *n, int key, CMP_REGISTRATION, PRINT){
             return;
         }
     }
-    printf("\n\tALUNO NAO EXISTE!\n");
+    printf("\n\tSTUDENT DOES NOT EXIST!\n");
 }
 
 node * prune(node * n, int key, CMP_REGISTRATION, PRINT){
     if (n == NULL) {
-        printf("\n\tALUNO NAO EXISTE!\n");
+        printf("\n\tSTUDENT DOES NOT EXIST!\n");
         return NULL;
     }
     else if (comp(n->type, n->element, key) == -1)
@@ -118,7 +121,7 @@ node * prune(node * n, int key, CMP_REGISTRATION, PRINT){
         n->right = prune(n->right, key, comp, print);
     else {//Se chegar aqui achei o no a ser removido
         print(n->type, n->element);
-        printf("\n\tALUNO EXCLUIDO!\n");
+        printf("\n\tEXCLUDED STUDENT!\n");
 
         // Se o nó não tem filhos só o desaloco
         if (n->left == NULL && n->right == NULL) {
